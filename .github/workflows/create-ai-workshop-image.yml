@@ -1,0 +1,49 @@
+name: create-ai-workshop-image
+on:
+  workflow_dispatch:
+    inputs:
+      source_image:
+        description: 'Source Image'
+        required: true
+        default: 'ubuntu-2004-focal-v20210820'
+      build_zone:
+        description: 'Google Cloud Zone'
+        required: true
+        default: 'us-central1-a'
+
+jobs:
+  build-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@master
+        with:
+          project_id: ${{ secrets.GOOGLE_PROJECT_ID }}
+          service_account_key: ${{ secrets.GOOGLE_SA_PACKER_KEY }}
+          export_default_credentials: true
+
+      - name: Update apt
+        run: sudo apt-get update
+
+      - name: Upgrade pip
+        run: pip3 install --upgrade pip
+
+      - name: Install Ansible
+        run: python3 -m pip install ansible
+
+      - name: Install Packer
+        run: |
+          curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+          sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+          sudo apt-get update && sudo apt-get install packer
+
+      - name: Run Packer
+        run: |
+          cd packer
+          packer build \
+            -var "build_zone=${{ github.event.inputs.build_zone }}" \
+            -var "source_image=${{ github.event.inputs.source_image }}" \
+            ai-workshop-image.json
