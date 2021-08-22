@@ -1,0 +1,39 @@
+{
+  "variables": {
+    "image_name": "ai-workshop-image-{{ uuid }}",
+    "tmp_dir": "/tmp/"
+  },
+  "builders": [
+    {
+      "type": "googlecompute",
+      "project_id": "ai-workshop-322714",
+      "zone": "{{ user `build_zone` }}",
+
+      "source_image": "{{ user `source_image` }}",
+	
+      "machine_type": "n1-standard-2",
+      "disk_size": "20",
+      
+      "image_name": "{{ user `image_name` }}",
+      "image_description": "AI Workshop Instance Image on Ubuntu Image - {{ isotime \"2006-01-02_03-04-05\" }}",
+      
+      "ssh_username": "packer",
+      "ssh_timeout": "30m",
+
+      "image_labels": {
+	"distro": "ubuntu-2004-focal",
+	"base-image": "{{ user `source_image` }}",
+	"name": "{{ user `image_name` }}",
+	"created-on": "{{ isotime \"2006-01-02_03-04-05\" }}"
+      }
+    }
+  ],
+  
+  "provisioners": [
+    {
+      "type": "ansible",
+      "playbook_file": "../ansible/ai-workshop-create-image.yml"
+    }
+  ]
+}
+

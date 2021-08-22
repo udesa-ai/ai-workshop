@@ -1,0 +1,7 @@
+- name: AI Workshop Image Setup
+  become: yes
+  gather_facts: false
+  become_method: sudo
+  hosts: all
+  roles:
+    - test
