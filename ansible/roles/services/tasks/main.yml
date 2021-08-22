@@ -1,0 +1,12 @@
+- name: Install jupyter lab service
+  template:
+    src: etc_systemd_system_jupyterlab.service.j2
+    dest: /etc/systemd/system/jupyterlab.service
+  become: yes
+
+- name: Enable jupyter lab service
+  systemd:
+    name: jupyterlab
+    enabled: yes
+    masked: no
+  become: yes
