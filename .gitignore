@@ -2,4 +2,4 @@
 .ipynb_checkpoints/
 
 # Terraform
-.terraform/
+.terraform*
