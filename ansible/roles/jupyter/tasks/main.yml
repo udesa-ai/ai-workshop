@@ -1,0 +1,36 @@
+- name: Copy workshop content to the instance
+  copy: 
+    src: "{{ playbook_dir }}/../workshop"
+    dest: "{{ user_home }}/"
+
+- name: Create Jupyter configuration directory
+  file:
+    path: "{{ user_home}}/.jupyter"
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
+
+- name: Copy Jupyter Lab config
+  copy:
+    src: "jupyter_lab_config.py"
+    dest: "{{ user_home}}/.jupyter/"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+
+- name: Install Tensorflow
+  pip:
+    name: tensorflow
+    state: latest
+  become: yes
+
+- name: Install Tensorflow
+  pip:
+    name: numpy
+    state: latest
+  become: yes
+
+- name: Install Tensorflow
+  pip:
+    name: matplotlib
+    state: latest
+  become: yes

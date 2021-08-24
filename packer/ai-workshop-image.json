@@ -33,6 +33,11 @@
     {
       "type": "ansible",
       "playbook_file": "../ansible/ai-workshop-create-image.yml"
+    },
+    {
+      "type": "breakpoint",
+      "disable": false,
+      "note": "this is a breakpoint"
     }
   ]
 }
