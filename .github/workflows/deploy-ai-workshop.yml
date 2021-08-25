@@ -31,7 +31,7 @@ on:
         required: true
         default: 'n2-standard-1'
 jobs:
-  build-image:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -41,7 +41,7 @@ jobs:
         uses: google-github-actions/setup-gcloud@master
         with:
           project_id: ${{ secrets.GOOGLE_PROJECT_ID }}
-          service_account_key: ${{ secrets.GOOGLE_SA_PACKER_KEY }}
+          service_account_key: ${{ secrets.GOOGLE_SA_TERRAFORM_KEY }}
           export_default_credentials: true
 
       - name: Update apt
