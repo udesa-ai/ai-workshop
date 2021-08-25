@@ -13,7 +13,7 @@ on:
       source_image:
         description: Image name
         required: true
-        default: ai-workshop-image-6122cba1-3417-79c9-970e-84c998b203a5
+        default: ai-workshop-image-61265096-1a58-311f-1dcd-2d45c975eb25
       environment:
         description: Environment type to deploy
         required: true
@@ -60,8 +60,7 @@ jobs:
           terraform apply \
             -var gcp_project="${{ github.event.inputs.gcp_project }}" \
             -var "name_prefix="${{ github.event.inputs.name_prefix }}" \
-            -var "workshop_image="${{ github.event.inputs.image_name }}"
-            -var "source_image="${{ github.event.inputs.source_image }}" \
+            -var "workshop_image="${{ github.event.inputs.source_image }}"
             -var zone="${{ github.event.inputs.build_zone }}" \
             -var region="${{ github.event.inputs.build_region }}" \
             -var machine_type="${{ github.event.inputs.machine_type }}"
