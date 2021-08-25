@@ -59,8 +59,8 @@ jobs:
           terraform init -backend-config="${{ github.event.inputs.environment }}.tfbackend"
           terraform apply \
             -var gcp_project="${{ github.event.inputs.gcp_project }}" \
-            -var "name_prefix="${{ github.event.inputs.name_prefix }}" \
-            -var "workshop_image="${{ github.event.inputs.source_image }}"
+            -var name_prefix="${{ github.event.inputs.name_prefix }}" \
+            -var workshop_image="${{ github.event.inputs.source_image }}"
             -var zone="${{ github.event.inputs.build_zone }}" \
             -var region="${{ github.event.inputs.build_region }}" \
             -var machine_type="${{ github.event.inputs.machine_type }}"
