@@ -1,5 +1,5 @@
 resource "google_compute_firewall" "workshop_rules" {
-  name        = "workshop-ingress"
+  name        = "allow-${var.name_prefix}--ingress"
   network     = var.compute_network
 
   description = "Creates firewall rule targeting tagged instances"

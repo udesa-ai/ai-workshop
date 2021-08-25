@@ -6,7 +6,6 @@ variable "gcp_project" {
 variable "name_prefix" {
   description = "Name prefix for the resources"
   type = string
-  default = "workshop"
 }
 
 variable "zone" {

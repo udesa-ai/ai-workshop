@@ -32,7 +32,7 @@ resource "google_compute_instance_template" "workshop_template" {
 }
 
 resource "google_compute_health_check" "autohealing" {
-  name                = "autohealing-health-check"
+  name                = "${var.name_prefix}-autohealing-health-check"
   check_interval_sec  = 5
   timeout_sec         = 5
   healthy_threshold   = 2
@@ -45,9 +45,9 @@ resource "google_compute_health_check" "autohealing" {
 }
 
 resource "google_compute_region_instance_group_manager" "workshop_igm" {
-  name = "workshop-igm"
+  name = "${var.name_prefix}-igm"
 
-  base_instance_name         = "workshop"
+  base_instance_name         = var.name_prefix
   region                     = var.region
   distribution_policy_zones  = var.distribution_zones
 
