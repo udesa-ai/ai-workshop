@@ -9,7 +9,7 @@ on:
       name_prefix:
         description: Prefix to identify resources
         required: true
-        description: workshop
+        default: workshop
       source_image:
         description: Image name
         required: true
