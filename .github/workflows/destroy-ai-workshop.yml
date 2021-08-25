@@ -6,6 +6,10 @@ on:
         description: Google Cloud project ID
         required: true
         default: ai-workshop-322714
+      environment: 
+        description: Environment to destroy resources
+        required: true
+        default: development    
       name_prefix:
         description: Prefix to identify resources
         required: true
