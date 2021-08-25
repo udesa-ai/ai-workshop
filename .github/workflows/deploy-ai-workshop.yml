@@ -57,7 +57,7 @@ jobs:
         run: |
           cd terraform/environments/${{ github.event.inputs.environment }}
           terraform init -backend-config="${{ github.event.inputs.environment }}.tfbackend"
-          terraform apply \
+          terraform apply -auto-approve \
             -var gcp_project="${{ github.event.inputs.gcp_project }}" \
             -var name_prefix="${{ github.event.inputs.name_prefix }}" \
             -var workshop_image="${{ github.event.inputs.source_image }}"
