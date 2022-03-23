@@ -1,3 +1,6 @@
+# JetBrains
+.idea/
+
 # Jupyter
 .ipynb_checkpoints/
 
