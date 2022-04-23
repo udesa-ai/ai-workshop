@@ -28,7 +28,7 @@ For more information on this topic, please follow this [link](https://github.com
 
 ## Notebook usage
 
-The tutorial should be given in ![Google Colab](https://camo.githubusercontent.com/84f0493939e0c4de4e6dbe113251b4bfb5353e57134ffd9fcab6b8714514d4d1/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667). 
+The tutorial should be given in [Google Colab](https://colab.research.google.com).
 The purpose of this repository is only to version the notebooks.
 
 The instructor shall ask the students to create a Google account, if they don't have it already.
