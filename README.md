@@ -35,3 +35,6 @@ The instructor shall ask the students to create a Google account, if they don't 
 After that, the instructor will share the notebooks by sending a link with `view` permission only, so each student can make a copy of
 the notebook and use it as they wish, without disrupting the originals.
 
+## License
+
+This project was developed under [MIT License](./LICENSE).
