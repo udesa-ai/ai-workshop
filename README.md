@@ -38,8 +38,3 @@ the notebook and use it as they wish, without disrupting the originals.
 ## License
 
 This project was developed under [MIT License](./LICENSE).
-
-
-[mnist]: 
-[fashion_mnist]: https://colab.research.google.com/github/udesa-ai/ai-workshop/blob/main/workshop/classification/fashion_mnist.ipynb
-[flowers]: https://colab.research.google.com/github/udesa-ai/ai-workshop/blob/main/workshop/classification/flowers.ipynb
