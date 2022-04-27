@@ -8,15 +8,9 @@ related to the first steps into Deep Learning.
 
 In this workshop, up to this moment, you will find classification tasks, as follows:
 
-* MNIST classification <a href="https://colab.research.google.com/github/udesa-ai/ai-workshop/blob/main/workshop/classification/mnist.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
-</a>
-* Fashion MNIST classification <a href="https://colab.research.google.com/github/udesa-ai/ai-workshop/blob/main/workshop/classification/fashion_mnist.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
-</a>
-* Flowers classification <a href="https://colab.research.google.com/github/udesa-ai/ai-workshop/blob/main/workshop/classification/flowers.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
-</a>
+* MNIST classification <a href="https://colab.research.google.com/github/udesa-ai/ai-workshop/blob/main/workshop/classification/mnist.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"></a>
+* Fashion MNIST classification <a href="https://colab.research.google.com/github/udesa-ai/ai-workshop/blob/main/workshop/classification/fashion_mnist.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"></a>
+* Flowers classification <a href="https://colab.research.google.com/github/udesa-ai/ai-workshop/blob/main/workshop/classification/flowers.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"></a>
 
 The first tutorial for students who are seeing learning algorithms for the first time, should be starting off MNIST classification to learn about hyperparameters and interact with the data. 
 Then, Fashion MNIST should be a further step as to learn about a few layers used in neural networks.
